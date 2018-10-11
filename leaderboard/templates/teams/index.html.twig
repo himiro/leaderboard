@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Hello {{ teams[0].name }}!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello {{ teams[0].name }}! ✅</h1>
 
     This friendly message is coming from:
     <ul>
@@ -21,6 +21,7 @@
         - nombre de points<br />
         - nombre de victoires<br />
         - nombre de defaites<br />
+        localhost:8000/teams/[team-name]<br />
         - une liste de match avec : <br />
             - nom de l'adversaire<br />
             - Status (victoire/défaite)<br />
