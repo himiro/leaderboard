@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Teams;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
+use Doctrine\ORM\EntityRepository;
 
 class TeamsController extends AbstractController
 {
@@ -44,7 +46,7 @@ class TeamsController extends AbstractController
 
         $entityManager->flush();
 
-        return new Response('Saved new team with id '.$team->getId());
+        return new Response('Saved new team with id ' . $team->getId());
     }
 
     /**
@@ -58,10 +60,24 @@ class TeamsController extends AbstractController
 
         if (!$team) {
             throw $this->createNotFoundException(
-                'No product found for id '.$id_team
+                'No product found for id ' . $id_team
             );
         }
 
-        return new Response('Check out this great team: '.$team->getName());
+        return new Response('Check out this great team: ' . $team->getName());
+    }
+
+    /**
+     * @Route("/test", name="teams_getJoin")
+     */
+    public function getJoin()
+    {
+    /*         $team = $this->createQueryBuilder('teams')
+            ->innerJoin('teams.id', 'matches')
+            ->orderBy('matches.id_team1', 'ACS')
+            ->getQuery()
+            ->execute();
+*/
+        return new Response('Check out this great team: ');
     }
 }

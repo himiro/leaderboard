@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f41e3f61-5685-48a5-8bec-a082a3c8a507" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +21,7 @@
     <session id="254000517">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -25,63 +29,32 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="console" value="1" />
-          <entry key="php" value="9" />
-          <entry key="twig" value="3" />
+          <entry key="php" value="10" />
+          <entry key="twig" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="10" />
-          <entry key="Twig" value="3" />
+          <entry key="PHP" value="11" />
+          <entry key="Twig" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="268" />
-          <entry key="twig" value="71" />
+          <entry key="php" value="796" />
+          <entry key="twig" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="268" />
-          <entry key="Twig" value="71" />
+          <entry key="PHP" value="796" />
+          <entry key="Twig" value="107" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="14" selection-start-line="17" selection-end-line="21" selection-end-column="74" />
-              <folding>
-                <element signature="e#34#99#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="45" column="34" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="45" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -100,9 +73,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
-        <option value="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" />
+        <option value="$PROJECT_DIR$/leaderboard/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
       </list>
     </option>
   </component>
@@ -215,7 +190,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="25" />
-    <option name="width" value="927" />
+    <option name="width" value="941" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -313,24 +288,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539264174073</updated>
-      <workItem from="1539264175399" duration="5409000" />
+      <workItem from="1539264175399" duration="11349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5409000" />
+    <option name="totallyTimeSpent" value="11349000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
-    <editor active="true" />
+    <frame x="67" y="25" width="941" height="1055" extended-state="4" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24971624" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24581006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -362,34 +336,10 @@
     <entry file="file://$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" selection-start-line="17" selection-end-line="21" selection-end-column="74" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -403,8 +353,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="45" column="34" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="645">
+          <caret line="45" column="34" selection-start-line="41" selection-start-column="17" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

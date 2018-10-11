@@ -1,26 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ teams[0].name }}!{% endblock %}
+{% block title %}Hello!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ teams[0].name }}! ✅</h1>
+    {% for team in teams %}
 
-    This friendly message is coming from:
+        <div class="example-wrapper">
+            <h1>Hello {{ team.name }}! ✅</h1>
+        </div>
+
+    {% endfor %}
+
     <ul>
         <li>Your controller at <code><a href="{{ 'src/Controller/TeamsController.php'|file_link(0) }}">src/Controller/TeamsController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'templates/teams/index.html.twig'|file_link(0) }}">templates/teams/index.html.twig</a></code></li>
     </ul>
+    This friendly message is coming from:
     <p>Voici la page equipe elle doit afficher :<br />
         (localhost:8000/team)<br />
         - une liste de match avec : <br />
-            - nom de l'adversaire<br />
-            - Status (victoire/défaite)<br />
-            - Durée du match</p>
-</div>
+        - nom de l'adversaire<br />
+        - Status (victoire/défaite)<br />
+        - Durée du match</p>
 {% endblock %}
