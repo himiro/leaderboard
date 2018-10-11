@@ -7,13 +7,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MatchesController extends AbstractController
 {
-    /**
-     * @Route("/matches", name="matches")
-     */
-    public function index()
+
+    public function getMatches()
     {
-        return $this->render('matches/index.html.twig', [
-            'controller_name' => 'MatchesController',
-        ]);
+        $match = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->findAll();
+
+        return $this->render('matches/index.html.twig', ['matches' => $match]);
     }
+
+
 }
