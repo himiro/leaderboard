@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Matches;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Validator\Constraints\DateTime;
 
@@ -68,6 +69,8 @@ class MatchesController extends AbstractController
                 'No product found for id ' . $id_team
             );
         }
-        return new Response("Matches by team id" . $match->getIdTeam1());
+        $response = new JsonResponse();
+        $response->setData($match);
+        return $response;
     }
 }
