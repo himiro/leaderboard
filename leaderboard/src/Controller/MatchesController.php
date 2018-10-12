@@ -68,8 +68,8 @@ class MatchesController extends AbstractController
                 'No product found for id ' . $id_team
             );
         }
-        $response = new JsonResponse();
-        $response->setData($match);
-        return $response;
+
+        //return new Response('Matches :  ' . $match[1]->getWinner());
+        $response = new JsonResponse($match);
     }
 }
