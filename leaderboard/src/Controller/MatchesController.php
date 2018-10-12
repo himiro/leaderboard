@@ -70,6 +70,6 @@ class MatchesController extends AbstractController
         }
 
         //return new Response('Matches :  ' . $match[1]->getWinner());
-        $response = new JsonResponse($match);
+        return new JsonResponse($match);
     }
 }
