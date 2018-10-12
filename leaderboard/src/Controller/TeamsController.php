@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Teams;
+use App\Entity\Matches;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 
@@ -66,17 +67,4 @@ class TeamsController extends AbstractController
         return new Response('Check out this great team: ' . $team->getName());
     }
 
-    /**
-     * @Route("/test", name="teams_getJoin")
-     */
-    public function getJoin()
-    {
-    /*         $team = $this->createQueryBuilder('teams')
-            ->innerJoin('teams.id', 'matches')
-            ->orderBy('matches.id_team1', 'ACS')
-            ->getQuery()
-            ->execute();
-*/
-        return new Response('Check out this great team: ');
-    }
 }
