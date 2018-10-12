@@ -31,7 +31,7 @@ class MatchesRepository extends ServiceEntityRepository
             ->setParameter('id_team', $id_team)
             ->getQuery();
 
-        return $qb->execute();
+        return $qb->getArrayResult();
     }
 
 //    /**
