@@ -7,7 +7,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Teams;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
-use Doctrine\ORM\EntityRepository;
 
 class TeamsController extends AbstractController
 {
