@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Validator\Constraints\DateTime;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class MatchesController extends AbstractController
 {
@@ -54,15 +55,13 @@ class MatchesController extends AbstractController
     }
 
     /**
-     * @Route("/matches/{id_team}", name="matches_getMatchesByTeamId")
+     * @Route("/matches/{id_team}", name="matches_getMatchesByTeamId1")
      */
     public function getMatchesByTeamId($id_team)
     {
         $match = $this->getDoctrine()
             ->getRepository(Matches::class)
-            ->findBy(
-            ['id_team1' => $id_team]
-            );
+            ->findTeamId($id_team);
 
         if (!$match) {
             throw $this->createNotFoundException(

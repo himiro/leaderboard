@@ -19,6 +19,21 @@ class MatchesRepository extends ServiceEntityRepository
         parent::__construct($registry, Matches::class);
     }
 
+    /**
+     * @param $id_team
+     * @return Matches[]
+     */
+    public function findTeamId($id_team): array
+    {
+        $qb = $this->createQueryBuilder('match')
+            ->where('match.id_team1 = :id_team')
+            ->orWhere('match.id_team2 = :id_team')
+            ->setParameter('id_team', $id_team)
+            ->getQuery();
+
+        return $qb->execute();
+    }
+
 //    /**
 //     * @return Matches[] Returns an array of Matches objects
 //     */
