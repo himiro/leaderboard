@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Matches;
+use App\Entity\Teams;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Validator\Constraints\DateTime;
@@ -55,9 +56,9 @@ class MatchesController extends AbstractController
     }
 
     /**
-     * @Route("/matches/{id_team}", name="matches_test")
+     * @Route("/matches/{id_team}", name="matches_getTeamsAndMatches")
      */
-    public function test($id_team)
+    public function getTeamsAndMatches($id_team)
     {
 
 
@@ -65,7 +66,11 @@ class MatchesController extends AbstractController
             ->getRepository(Matches::class)
             ->getMatchesByTeamId($id_team);
 
-        return $this->render('matches/index.html.twig', ['matches' => $match]);
+        $team = $this->getDoctrine()
+            ->getRepository(Teams::class)
+            ->find($id_team);
+
+        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team]);
 
     }
 
