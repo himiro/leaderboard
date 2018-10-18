@@ -15,17 +15,10 @@ class DefaultController extends Controller
 {
     public function index()
     {
-        return new Response('
-            <html>
-                <body>
-                    <h1>Voici la page d\'accueil.</h1> Elle doit afficher les équipes avec les éléments suivants:
-                    - nom,
-                    - nombre de points,
-                    - nombre de victoires,
-                    - nombre de défaites
-                    </h1>
-                </body>
-            </html>
-        ');
+        $team = $this->getDoctrine()
+            ->getRepository(Teams::class)
+            ->findAll();
+
+        return $this->render('teams/index.html.twig', ['teams' => $team]);
     }
 }
