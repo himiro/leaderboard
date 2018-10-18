@@ -13,20 +13,18 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class TeamsController extends AbstractController
 {
-/*
- * Mettre l'index sur getTeams et non getTeams dans defaultcontroller
- */
-    ///**
-     //* @Route("/", name="teams_getTeams")
-     //*/
-    /*public function getTeams()
+
+    /**
+     * @Route("/", name="teams_getTeams")
+     */
+    public function getTeams()
     {
         $team = $this->getDoctrine()
             ->getRepository(Teams::class)
             ->findAll();
 
         return $this->render('teams/index.html.twig', ['teams' => $team]);
-    }*/
+    }
 
 
     /*

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f41e3f61-5685-48a5-8bec-a082a3c8a507" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,14 +31,14 @@
         <counts>
           <entry key="console" value="1" />
           <entry key="env" value="2" />
-          <entry key="php" value="40" />
+          <entry key="php" value="41" />
           <entry key="twig" value="14" />
           <entry key="yaml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="41" />
+          <entry key="PHP" value="42" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Twig" value="14" />
           <entry key="YAML" value="6" />
@@ -45,13 +46,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="4148" />
+          <entry key="php" value="4227" />
           <entry key="twig" value="210" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="4147" />
+          <entry key="PHP" value="4226" />
           <entry key="SQL" value="1" />
           <entry key="Twig" value="210" />
         </counts>
@@ -90,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
+            <state relative-caret-position="1230">
               <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
               <folding>
                 <element signature="e#34#99#0#PHP" expanded="true" />
@@ -102,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="60" column="14" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="238">
+              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="e#34#99#0#PHP" expanded="true" />
               </folding>
@@ -160,10 +161,11 @@
         <option value="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Entity/Matches.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Entity/Teams.php" />
-        <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
         <option value="$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
       </list>
     </option>
   </component>
@@ -304,27 +306,6 @@
               <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
               <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
-              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
-              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
-              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,12 +406,12 @@
       <workItem from="1539327358914" duration="15843000" />
       <workItem from="1539359903355" duration="2672000" />
       <workItem from="1539363137743" duration="697000" />
-      <workItem from="1539846269651" duration="24162000" />
+      <workItem from="1539846269651" duration="25217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54723000" />
+    <option name="totallyTimeSpent" value="55778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="927" height="1055" extended-state="4" />
@@ -464,13 +445,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45" />
@@ -565,16 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="29" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/config/routes/annotations.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -596,8 +560,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
+        <state relative-caret-position="1230">
           <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
             <element signature="e#34#99#0#PHP" expanded="true" />
           </folding>
