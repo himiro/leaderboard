@@ -79,11 +79,21 @@ class MatchesController extends AbstractController
          * Epsilon : 50
          */
 
-        /*calcMu();
-        calcSigma();*/
+        echo $team->id;
+        exit;
+
+        $points = $this->calcPoints();
+        $this->calcMu();
+        $this->calcSigma();
 
         return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team]);
 
+    }
+
+    public function calcPoints()
+    {
+
+        return ;
     }
 
     public function calcMu()
