@@ -3,10 +3,10 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Matches;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -55,20 +55,18 @@ class MatchesController extends AbstractController
     }
 
     /**
-     * @Route("/matches/{id_team}", name="matches_getMatchesByTeamId1")
+     * @Route("/matches/{id_team}", name="matches_test")
      */
-    public function getMatchesByTeamId($id_team)
+    public function test($id_team)
     {
+
+
         $match = $this->getDoctrine()
             ->getRepository(Matches::class)
-            ->findTeamId($id_team);
+            ->getMatchesByTeamId($id_team);
 
-        if (!$match) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id_team
-            );
-        }
+        return $this->render('matches/index.html.twig', ['matches' => $match]);
 
-        return new JsonResponse($match);
     }
+
 }

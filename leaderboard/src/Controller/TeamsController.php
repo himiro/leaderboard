@@ -8,12 +8,14 @@ use App\Entity\Teams;
 use App\Entity\Matches;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 
 class TeamsController extends AbstractController
 {
 
     /**
-     * @Route("/teams", name="teams_getTeams")
+     * @Route("/", name="teams_getTeams")
      */
     public function getTeams()
     {
@@ -33,7 +35,7 @@ class TeamsController extends AbstractController
     /**
      * @Route("/teams/add/{name}/{skillMu}/{skillSigma}", name="addTeam")
      */
-    public function addTeam($name = "", $skillMu = 0, $skillSigma = 0)
+    public function addTeam($name = "", $skillMu = 25, $skillSigma = 25/3)
     {
         $entityManager = $this->getDoctrine()->getManager();
 

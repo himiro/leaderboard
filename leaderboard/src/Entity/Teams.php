@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Teams
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()

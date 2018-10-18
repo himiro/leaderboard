@@ -34,4 +34,19 @@ class MatchesRepository extends ServiceEntityRepository
         return $qb->getArrayResult();
     }
 
+
+    /**
+     * @param $id_team
+     * @return match[]
+     */
+    public function getMatchesByTeamId($id_team): array
+    {
+        $qb = $this->createQueryBuilder('match')
+            ->andWhere('match.id_team1 = :id
+                OR match.id_team2 = :id')
+            ->setParameter('id', $id_team)
+            ->getQuery();
+
+        return $qb->execute();
+    }
 }

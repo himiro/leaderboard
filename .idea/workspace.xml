@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f41e3f61-5685-48a5-8bec-a082a3c8a507" name="Default Changelist" comment="" />
+    <list default="true" id="f41e3f61-5685-48a5-8bec-a082a3c8a507" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Entity/Teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Entity/Teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,60 +27,92 @@
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="console" value="1" />
-          <entry key="env" value="1" />
-          <entry key="php" value="27" />
-          <entry key="twig" value="11" />
+          <entry key="env" value="2" />
+          <entry key="php" value="38" />
+          <entry key="twig" value="12" />
           <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="28" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Twig" value="11" />
+          <entry key="PHP" value="39" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Twig" value="12" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2685" />
-          <entry key="twig" value="107" />
+          <entry key="php" value="3704" />
+          <entry key="twig" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2685" />
-          <entry key="Twig" value="107" />
+          <entry key="PHP" value="3703" />
+          <entry key="SQL" value="1" />
+          <entry key="Twig" value="144" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php">
+        <entry file="file://$PROJECT_DIR$/leaderboard/src/Entity/Matches.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#34#55#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leaderboard/src/Entity/Teams.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+              <folding>
+                <element signature="e#34#99#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-259">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding>
+                <element signature="e#34#99#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="446">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
               </folding>
@@ -87,6 +127,7 @@
       <find>controller_name</find>
       <find>team</find>
       <find>Product</find>
+      <find>match</find>
     </findStrings>
     <replaceStrings>
       <replace>teams</replace>
@@ -94,7 +135,11 @@
       <replace>match</replace>
       <replace>2</replace>
       <replace>Matches</replace>
+      <replace>team</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/leaderboard</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,11 +150,13 @@
         <option value="$PROJECT_DIR$/leaderboard/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Migrations/Version20181011083017.php" />
-        <option value="$PROJECT_DIR$/leaderboard/src/Entity/Matches.php" />
-        <option value="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" />
-        <option value="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Entity/Matches.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Entity/Teams.php" />
+        <option value="$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" />
       </list>
     </option>
   </component>
@@ -233,6 +280,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,12 +292,6 @@
               <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
               <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
-              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
@@ -285,11 +327,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="matches" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEB_leaderboard_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WEB_leaderboard_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="leaderboard" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="teams" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,17 +386,18 @@
       <workItem from="1539327358914" duration="15843000" />
       <workItem from="1539359903355" duration="2672000" />
       <workItem from="1539363137743" duration="697000" />
+      <workItem from="1539846269651" duration="15988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30561000" />
+    <option name="totallyTimeSpent" value="46549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26106697" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31895572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -348,7 +410,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21333334" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -378,25 +440,8 @@
     <entry file="file://$PROJECT_DIR$/leaderboard/bin/console">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/config/routes.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Migrations/Version20181012073222.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="157" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Migrations/Version20181011083017.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="18" selection-start-column="23" selection-end-line="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/config/packages/doctrine.yaml">
       <provider selected="true" editor-type-id="text-editor">
@@ -415,20 +460,6 @@
     <entry file="file://$PROJECT_DIR$/leaderboard/config/bundles.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Entity/Matches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -436,42 +467,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="420">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Migrations/Version20181011083017.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Migrations/Version20181012073222.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Entity/Matches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Entity/Teams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state relative-caret-position="446">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="67" column="24" lean-forward="true" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
