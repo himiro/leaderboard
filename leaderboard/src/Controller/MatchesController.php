@@ -70,8 +70,30 @@ class MatchesController extends AbstractController
             ->getRepository(Teams::class)
             ->find($id_team);
 
+        /*
+         * Mu : 25
+         * Sigma : 25/4
+         * Beta : 4.166666666666667
+         * Tau : 0.08333333333333334
+         * Draw proba : 0.1
+         * Epsilon : 50
+         */
+
+        calcMu();
+        calcSigma();
+
         return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team]);
 
     }
 
+    public function calcMu()
+    {
+        return ;
+    }
+
+    public function calcSigma()
+    {
+        return ;
+    }
+}
 }
