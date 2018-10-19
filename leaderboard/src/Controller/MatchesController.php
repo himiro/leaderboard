@@ -98,6 +98,9 @@ class MatchesController extends AbstractController
         array_push($resultMatches, $loosePoints);
         array_push($resultMatches, $drawPoints);
         array_push($resultMatches, $points);
+
+        $tmpSigma = 0;
+        $tmpMu = 0;
         foreach ($match as $m) {
             //Get name of opposed teams
             if ($m['id_team1'] != $id_team) {
