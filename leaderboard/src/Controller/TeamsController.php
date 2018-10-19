@@ -21,11 +21,10 @@ class TeamsController extends AbstractController
     {
         $team = $this->getDoctrine()
             ->getRepository(Teams::class)
-            ->getTeams();
+            ->getTeamsOrder();
 
         $resultMatches = [];
         foreach ($team as $t) {
-
             $tmp = $this->getTeamsResults($t['id']);
             array_push($resultMatches, $tmp);
             }

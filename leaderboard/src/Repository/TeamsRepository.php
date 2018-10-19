@@ -23,9 +23,11 @@ class TeamsRepository extends ServiceEntityRepository
     /**
      * @return team[]
      */
-    public function getTeams(): array
+    public function getTeamsOrder(): array
     {
         $qb = $this->createQueryBuilder('team')
+            ->orderBy('team.skill_mu', 'ASC')
+            ->orderBy('team.skill_sigma', 'DESC')
             ->getQuery()
             ->getArrayResult();
 
@@ -42,6 +44,38 @@ class TeamsRepository extends ServiceEntityRepository
             ->andWhere('team.id = :id')
             ->setParameter('id', $id_team)
             ->Select('team.name')
+            ->getQuery()
+            ->getSingleScalarResult();
+
+        return $qb;
+    }
+
+    /**
+     * @param $id_team
+     * @return team[]
+     */
+    public function getMuById($id_team)
+    {
+        $qb = $this->createQueryBuilder('team')
+            ->andWhere('team.id = :id')
+            ->setParameter('id', $id_team)
+            ->Select('team.skill_mu')
+            ->getQuery()
+            ->getSingleScalarResult();
+
+        return $qb;
+    }
+
+    /**
+     * @param $id_team
+     * @return team[]
+     */
+    public function getSigmaById($id_team)
+    {
+        $qb = $this->createQueryBuilder('team')
+            ->andWhere('team.id = :id')
+            ->setParameter('id', $id_team)
+            ->Select('team.skill_sigma')
             ->getQuery()
             ->getSingleScalarResult();
 
