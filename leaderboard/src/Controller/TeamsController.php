@@ -23,9 +23,11 @@ class TeamsController extends AbstractController
             ->getRepository(Teams::class)
             ->getTeams();
 
+        $resultMatches = [];
         foreach ($team as $t) {
 
-            $resultMatches = $this->getTeamsResults($t['id']);
+            $tmp = $this->getTeamsResults($t['id']);
+            array_push($resultMatches, $tmp);
             }
 
         return $this->render('teams/index.html.twig', ['teams' => $team, 'resultMatches' => $resultMatches]);
