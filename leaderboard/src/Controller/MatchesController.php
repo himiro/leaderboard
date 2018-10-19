@@ -56,18 +56,18 @@ class MatchesController extends AbstractController
     }
 
     ///**
-     //* @Route("/matches/autoadd/{nb} , name="matches_addnMatch")
+     //* @Route("/matches/autoadd/{nb}, name="matches_addnMatch")
      //*/
     /*public function addnMatch($nb)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
 
-        for ($i = 0; $i < nb; $i++ ) {
+        for ($i = 0; $i < $nb; $i++) {
             $match = new Matches();
             $match->setIdTeam1(rand() % 21 + 1);
             $match->setIdTeam2(rand() % 21 + 1);
-            $start = rand(1262055681,1262055681);
+            $start = rand(1262055681, 1262055681);
             $date = new \DateTime($start);
             $match->setStart($date);
             $end = $start + (rand() % 4000);
@@ -76,7 +76,6 @@ class MatchesController extends AbstractController
             $match->setWinner(rand() % 3);
 
             $entityManager->persist($match);
-
             $entityManager->flush();
         }
         return new Response('Saved new match with id ' . $match->getId());

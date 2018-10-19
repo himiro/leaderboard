@@ -51,22 +51,4 @@ class TeamsController extends AbstractController
         return new Response('Saved new team with id ' . $team->getId());
     }
 
-    /**
-     * @Route("/teams/{id_team}", name="teams_getTeamById")
-     */
-    public function getTeamById($id_team)
-    {
-        $team = $this->getDoctrine()
-            ->getRepository(Teams::class)
-            ->find($id_team);
-
-        if (!$team) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id_team
-            );
-        }
-
-        return new Response('Check out this great team: ' . $team->getName());
-    }
-
 }

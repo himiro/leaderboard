@@ -19,5 +19,18 @@ class TeamsRepository extends ServiceEntityRepository
         parent::__construct($registry, Teams::class);
     }
 
+    /**
+     * @param $id_team
+     * @return team[]
+     */
+    public function getTeamName($id_team): array
+    {
+        $qb = $this->createQueryBuilder('team')
+            ->andWhere('team.id = :id')
+            ->setParameter('id', $id_team)
+            ->select('team.name')
+            ->getQuery();
 
+        return $qb->execute();
+    }
 }
