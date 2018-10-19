@@ -24,10 +24,11 @@ class TeamsController extends AbstractController
             ->getTeams();
 
         foreach ($team as $t) {
-            $this->getTeamsResults($t['id']);
+
+            $resultMatches = $this->getTeamsResults($t['id']);
             }
 
-        return $this->render('teams/index.html.twig', ['teams' => $team]);
+        return $this->render('teams/index.html.twig', ['teams' => $team, 'resultMatches' => $resultMatches]);
     }
 
 
