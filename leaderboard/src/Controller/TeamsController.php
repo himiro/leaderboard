@@ -27,6 +27,26 @@ class TeamsController extends AbstractController
     }
 
 
+    public function getTeamsResults($id_team)
+    {
+        $resultMatches = [];
+        (int)$winPoints = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->getWinCount($id_team);
+
+        (int)$loosePoints = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->getLooseCount($id_team);
+
+        $points = $this->calcPoints($winPoints, $loosePoints);
+
+        array_push($resultMatches, $winPoints);
+        array_push($resultMatches, $loosePoints);
+        array_push($resultMatches, $points);
+
+        return $resultMatches;
+    }
+
     /*
      * TODO
      * Remove addTeam ?
