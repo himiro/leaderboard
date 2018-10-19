@@ -8,12 +8,23 @@
 
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="teams_description flex flex-col">
+        {{ dump(matches) }}
+        <h1 class="text-center uppercase">{{ teams.name }}</h1>
+        <h3 class="text-center">Historique des matches</h3>
+        <h1>{{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %</h1>
+        {% for match in matches %}
+            <div class="team--item bg-grey-lighter flex inline-flex justify-around p-3 m-3">
+                {% if match.winner == 0 %}
+                    <h1 class="text-grey">Tie</h1>
+                {% elseif(( match.id_team1 == teams.id and match.winner == 1) or(match.id_team2 == teams.id and match.winner == 2))%}
+                    <h1 class="text-green">Win</h1>
+                {% else %}
+                    <h1 class="text-red">Loose</h1>
+                {% endif %}
 
-<div class="example-wrapper">
-    <h1>Hello There, I dump the datas! </h1>
-</div>
+                <h1> {{ name[loop.index - 1] }} </h1>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
