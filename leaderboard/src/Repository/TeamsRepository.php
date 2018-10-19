@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Teams;
+use App\Entity\Matches;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -23,14 +24,15 @@ class TeamsRepository extends ServiceEntityRepository
      * @param $id_team
      * @return team[]
      */
-    public function getTeamName($id_team): array
+    public function getTeamName($id_team)
     {
         $qb = $this->createQueryBuilder('team')
             ->andWhere('team.id = :id')
             ->setParameter('id', $id_team)
-            ->select('team.name')
-            ->getQuery();
+            ->Select('team.name')
+            ->getQuery()
+            ->getSingleScalarResult();
 
-        return $qb->execute();
+        return $qb;
     }
 }

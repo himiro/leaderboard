@@ -96,6 +96,22 @@ class MatchesController extends AbstractController
             ->getRepository(Teams::class)
             ->find($id_team);
 
+        $name = [];
+        foreach ($match as $m) {
+            if ($m['id_team1'] != $id_team) {
+            $tmp = $this->getDoctrine()
+                ->getRepository(Teams::class)
+                ->getTeamName($m['id_team1']);
+                array_push($name, $tmp);
+            }
+            else{
+                $tmp = $this->getDoctrine()
+                    ->getRepository(Teams::class)
+                    ->getTeamName($m['id_team2']);
+                array_push($name, $tmp);
+            }
+        }
+
         /*
          * Mu : 25
          * Sigma : 25/4
@@ -123,7 +139,7 @@ class MatchesController extends AbstractController
         $this->calcMu();
         $this->calcSigma();
 
-        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'resultMatches' => $resultMatches]);
+        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches]);
 
     }
 

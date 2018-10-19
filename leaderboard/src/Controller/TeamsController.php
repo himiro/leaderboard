@@ -38,10 +38,15 @@ class TeamsController extends AbstractController
             ->getRepository(Matches::class)
             ->getLooseCount($id_team);
 
+        (int)$drawPoints = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->getDrawCount($id_team);
+
         $points = $this->calcPoints($winPoints, $loosePoints);
 
         array_push($resultMatches, $winPoints);
         array_push($resultMatches, $loosePoints);
+        array_push($resultMatches, $drawPoints);
         array_push($resultMatches, $points);
 
         return $resultMatches;

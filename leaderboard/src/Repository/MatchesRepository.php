@@ -36,9 +36,10 @@ class MatchesRepository extends ServiceEntityRepository
             ->andWhere('match.id_team1 = :id
                 OR match.id_team2 = :id')
             ->setParameter('id', $id_team)
-            ->getQuery();
+            ->getQuery()
+            ->getArrayResult();
 
-        return $qb->execute();
+        return $qb;
     }
 
     public function getWinCount($id_team)
@@ -68,6 +69,22 @@ class MatchesRepository extends ServiceEntityRepository
             ->setParameter('id', $id_team)
             ->setParameter('win1', Winner::WIN_TEAM1)
             ->setParameter('win2', Winner::WIN_TEAM2)
+            ->select("count(match)")
+            ->getQuery()
+            ->getSingleScalarResult();
+
+        return $qb;
+    }
+
+    public function getDrawCount($id_team)
+    {
+        $qb = $this->createQueryBuilder('match')
+            ->Where('match.id_team1 = :id
+                AND match.winner = :draw')
+            ->OrWhere('match.id_team2 = :id
+                AND match.winner = :draw')
+            ->setParameter('id', $id_team)
+            ->setParameter('draw', Winner::DRAW)
             ->select("count(match)")
             ->getQuery()
             ->getSingleScalarResult();
