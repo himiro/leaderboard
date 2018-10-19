@@ -90,11 +90,15 @@ class MatchesController extends AbstractController
     public function calcPoints($id_team)
     {
         //ratio win loose draw
-       $points = $this->getDoctrine()
+       $winPoints = $this->getDoctrine()
         ->getRepository(Matches::class)
         ->getWinCount($id_team);
 
-        return $points;
+        $loosePoints = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->getLooseCount($id_team);
+
+    return ((int)$winPoints - (int)$loosePoints);
     }
 
     public function calcMu()

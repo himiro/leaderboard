@@ -46,10 +46,32 @@ class MatchesRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('match')
             ->Where('match.id_team1 = :id
                 AND match.winner = :win1')
+            ->OrWhere('match.id_team2 = :id
+                AND match.winner = :win2')
             ->setParameter('id', $id_team)
-            ->setParameter('win1', 2)
-            ->getQuery();
+            ->setParameter('win1', Winner::WIN_TEAM1)
+            ->setParameter('win2', Winner::WIN_TEAM2)
+            ->select("count(match)")
+            ->getQuery()
+            ->getSingleScalarResult();
 
-        return $qb->execute();
+        return $qb;
+    }
+
+    public function getLooseCount($id_team)
+    {
+        $qb = $this->createQueryBuilder('match')
+            ->Where('match.id_team1 = :id
+                AND match.winner = :win2')
+            ->OrWhere('match.id_team2 = :id
+                AND match.winner = :win1')
+            ->setParameter('id', $id_team)
+            ->setParameter('win1', Winner::WIN_TEAM1)
+            ->setParameter('win2', Winner::WIN_TEAM2)
+            ->select("count(match)")
+            ->getQuery()
+            ->getSingleScalarResult();
+
+        return $qb;
     }
 }
