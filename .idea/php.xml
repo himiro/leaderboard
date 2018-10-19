@@ -98,6 +98,7 @@
       <path value="$PROJECT_DIR$/leaderboard/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/leaderboard/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/leaderboard/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/leaderboard/vendor/twig/extensions" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

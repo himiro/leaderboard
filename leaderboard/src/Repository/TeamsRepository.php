@@ -26,8 +26,20 @@ class TeamsRepository extends ServiceEntityRepository
     public function getTeamsOrder(): array
     {
         $qb = $this->createQueryBuilder('team')
-            ->orderBy('team.skill_mu', 'ASC')
-            ->orderBy('team.skill_sigma', 'DESC')
+            ->orderBy('team.skill_sigma', 'ASC')
+            ->orderBy('team.skill_mu', 'DESC')
+            ->getQuery()
+            ->getArrayResult();
+
+        return $qb;
+    }
+
+    /**
+     * @return team[]
+     */
+    public function getTeams(): array
+    {
+        $qb = $this->createQueryBuilder('team')
             ->getQuery()
             ->getArrayResult();
 
