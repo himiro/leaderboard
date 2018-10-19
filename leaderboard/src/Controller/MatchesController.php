@@ -64,6 +64,8 @@ class MatchesController extends AbstractController
     */
     public function getRanking($id_team)
     {
+        $mark = 0;
+        $rank = 0;
         $match = $this->getDoctrine()
             ->getRepository(Matches::class)
             ->getMatchesByTeamId($id_team);
@@ -98,11 +100,10 @@ class MatchesController extends AbstractController
         array_push($resultMatches, $points);
         foreach ($match as $m) {
             //Get name of opposed teams
-
             if ($m['id_team1'] != $id_team) {
-            $tmp = $this->getDoctrine()
-                ->getRepository(Teams::class)
-                ->getTeamName($m['id_team1']);
+                $tmp = $this->getDoctrine()
+                    ->getRepository(Teams::class)
+                    ->getTeamName($m['id_team1']);
                 array_push($name, $tmp);
             }
             else{
@@ -145,14 +146,15 @@ class MatchesController extends AbstractController
                 $tmpSigma += 0.25;
                 $this->updateSigma($m['id_team1'], $m['id_team2'], $tmpSigma);
             }
+            if ($mark == 0)
+            {
+                $this->updateMu($m['id_team1'], $m['id_team2'], $tmpSigma, $tmpMu, $points, $m['winner'], $id_team);
+                $rank = $this->calcSkill($tmpMu, $tmpSigma);
+                $mark = 1;
+            }
         }
 
-
-        $this->updateMu($m['id_team1'], $m['id_team2'], $tmpSigma, $tmpMu, $points, $m['winner'], $id_team);
-        $rank = $this->calcSkill($tmpMu, $tmpSigma);
-
         return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches, 'time' => $time, 'rank' => $rank]);
-
     }
 
     public function updateSigma($id_team1, $id_team2, $sigma)
@@ -174,10 +176,10 @@ class MatchesController extends AbstractController
 
         if ($winner == 1 && $id_team1 == $id_team) {
 
-        $team1 = $em->getRepository(Teams::class)->find($id_team1);
-        $team1->setSkillMu($mu + ($points / 100) * $sigma);
-        $team2 = $em->getRepository(Teams::class)->find($id_team2);
-        $team2->setSkillMu($mu - ($points / 100) * $sigma);
+            $team1 = $em->getRepository(Teams::class)->find($id_team1);
+            $team1->setSkillMu($mu + ($points / 100) * $sigma);
+            $team2 = $em->getRepository(Teams::class)->find($id_team2);
+            $team2->setSkillMu($mu - ($points / 100) * $sigma);
         }
         else if ($winner == 2 && $id_team2 == $id_team)
         {
@@ -197,7 +199,8 @@ class MatchesController extends AbstractController
 
     public function calcSkill($mu, $sigma)
     {
-        return ($mu - 3 * $sigma);
+        // Real formula mu - 3 * sigma
+        return ($sigma - $mu);
     }
 
 }
