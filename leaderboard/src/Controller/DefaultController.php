@@ -10,15 +10,9 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\Entity\Teams;
 
 class DefaultController extends Controller
 {
-    public function index()
-    {
-        $team = $this->getDoctrine()
-            ->getRepository(Teams::class)
-            ->findAll();
 
-        return $this->render('teams/index.html.twig', ['teams' => $team]);
-    }
 }

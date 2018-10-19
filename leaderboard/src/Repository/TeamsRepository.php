@@ -19,42 +19,5 @@ class TeamsRepository extends ServiceEntityRepository
         parent::__construct($registry, Teams::class);
     }
 
-    public function getMatches()
-    {
-        $team = $this->getDoctrine()
-            ->getRepository(Matches::class)
-            ->findAll();
 
-        return $this->render('teams/index.html.twig', ['teams' => $team]);
-    }
-
-
-//    /**
-//     * @return Teams[] Returns an array of Teams objects
-//     */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Teams
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
