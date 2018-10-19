@@ -10,13 +10,13 @@
     </style>
     <div class="team__items__list flex flex-col">
         {% for team in teams %}
-            <a class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue text-blue-dark hover:text-white p-3 m-3 rounded no-underline" href="/team/{{ team.id }}">
+            <a class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue text-black hover:text-white p-3 m-3 rounded no-underline" href="/team/{{ team.id }}">
                 <div class="team__items__list__item--left-content flex justify-center content-center w-1/6">
                     <h1 class="text-center
                     {% if loop.index == 1 %}
                         text-yellow-dark
                     {% elseif loop.index == 2 %}
-                        text-grey-dark hover:bg-red
+                        text-grey-dark
                     {% elseif loop.index == 3 %}
                         text-orange-darker
                     {% endif %}
