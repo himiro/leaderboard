@@ -1,21 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello!{% endblock %}
+{% block title %}Team ranking{% endblock %}
 
 {% block body %}
     <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
         .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
     </style>
+    <div class="team__items__list flex flex-col">
+        {% for team in teams %}
+            <div class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue hover:text-white p-3 m-3 rounded">
+                <div class="team__items__list__item--left-content flex justify-center content-center w-1/6">
+                    <h1 class="text-center
+                    {% if loop.index == 1 %}
+                        text-yellow-dark
+                    {% elseif loop.index == 2 %}
+                        text-grey-dark hover:bg-red
+                    {% elseif loop.index == 3 %}
+                        text-orange-darker
+                    {% endif %}
+                    ">
+                        <span class="rounded-full self-center"> {{ loop.index }}</span> </h1>
+                </div>
 
-    {% for team in teams %}
+                <div class="team__items__list__item--right-content flex flex-col w-5/6">
+                    <h1>{{ team.name }}</h1>
+                    <div class="team__items__list__item__skills flex inline-flex justify-around font-bold">
+                        <span class="team__items__list__item__skills--item">µ: {{ team.skillMu }}</span>
+                        <span class="team__items__list__item__skills--item">σ: {{ team.skillSigma }}</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="example-wrapper">
-            <h1>Hello {{ team.name }}! ✅</h1>
-        </div>
-
-    {% endfor %}
-
+        {% endfor %}
+    </div>
     <ul>
         <li>Your controller at <code><a href="{{ 'src/Controller/TeamsController.php'|file_link(0) }}">src/Controller/TeamsController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'templates/teams/index.html.twig'|file_link(0) }}">templates/teams/index.html.twig</a></code></li>
