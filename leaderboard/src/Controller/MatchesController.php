@@ -66,7 +66,10 @@ class MatchesController extends AbstractController
             ->find($id_team);
 
         $name = [];
+        $time = [];
         foreach ($match as $m) {
+            //Get name of opposed teams
+
             if ($m['id_team1'] != $id_team) {
             $tmp = $this->getDoctrine()
                 ->getRepository(Teams::class)
@@ -79,6 +82,10 @@ class MatchesController extends AbstractController
                     ->getTeamName($m['id_team2']);
                 array_push($name, $tmp);
             }
+
+            //Get time of a match
+            $tmp = $m['start']->diff($m['end']);
+            array_push($time, $tmp);
         }
 
         /*
@@ -91,6 +98,7 @@ class MatchesController extends AbstractController
          * Taux de victoire %
          */
 
+        //Get the Loss, Tie and Win from a team
         $resultMatches = [];
         (int)$winPoints = $this->getDoctrine()
             ->getRepository(Matches::class)
@@ -104,6 +112,7 @@ class MatchesController extends AbstractController
             ->getRepository(Matches::class)
             ->getDrawCount($id_team);
 
+        //Calculate the score
         $points = $this->calcPoints($winPoints, $loosePoints);
 
         array_push($resultMatches, $winPoints);
@@ -117,7 +126,7 @@ class MatchesController extends AbstractController
         $rank = 0;
         //$rank = $this->calcSkill();
 
-        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches, 'rank' => $rank]);
+        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches, 'time' => $time, 'rank' => $rank]);
 
     }
 

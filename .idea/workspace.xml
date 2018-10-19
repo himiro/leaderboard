@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" afterDir="false" />
@@ -38,7 +37,7 @@
           <entry key="console" value="1" />
           <entry key="env" value="2" />
           <entry key="php" value="49" />
-          <entry key="twig" value="26" />
+          <entry key="twig" value="27" />
           <entry key="yaml" value="8" />
         </counts>
       </usages-collector>
@@ -46,21 +45,21 @@
         <counts>
           <entry key="PHP" value="50" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Twig" value="26" />
+          <entry key="Twig" value="27" />
           <entry key="YAML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="7027" />
-          <entry key="twig" value="331" />
+          <entry key="php" value="7344" />
+          <entry key="twig" value="336" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="7026" />
+          <entry key="PHP" value="7343" />
           <entry key="SQL" value="1" />
-          <entry key="Twig" value="331" />
+          <entry key="Twig" value="336" />
         </counts>
       </usages-collector>
     </session>
@@ -70,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+            <state relative-caret-position="-150">
+              <caret line="86" column="36" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="36" />
               <folding>
                 <element signature="e#34#99#0#PHP" expanded="true" />
               </folding>
@@ -82,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="105">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -115,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="87" column="33" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="33" />
+            <state relative-caret-position="379">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="e#34#57#0#PHP" expanded="true" />
               </folding>
@@ -163,10 +162,10 @@
         <option value="$PROJECT_DIR$/leaderboard/templates/matches/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Twig/AppExtension.php" />
-        <option value="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php" />
         <option value="$PROJECT_DIR$/leaderboard/templates/teams/index.html.twig" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/TeamsController.php" />
+        <option value="$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php" />
         <option value="$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php" />
         <option value="$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig" />
       </list>
@@ -395,12 +394,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75380000" />
+    <option name="totallyTimeSpent" value="76239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="927" height="1055" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32690126" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32690126" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,7 +413,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1711111" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1711111" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -546,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="87" column="33" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="33" />
-          <folding>
-            <element signature="e#34#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/TeamsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -576,10 +566,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard/src/Repository/MatchesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/src/Controller/MatchesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
+        <state relative-caret-position="-150">
+          <caret line="86" column="36" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="36" />
           <folding>
             <element signature="e#34#99#0#PHP" expanded="true" />
           </folding>
@@ -588,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leaderboard/templates/matches/matches.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
