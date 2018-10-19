@@ -21,7 +21,11 @@ class TeamsController extends AbstractController
     {
         $team = $this->getDoctrine()
             ->getRepository(Teams::class)
-            ->findAll();
+            ->getTeams();
+
+        foreach ($team as $t) {
+            $this->getTeamsResults($t['id']);
+            }
 
         return $this->render('teams/index.html.twig', ['teams' => $team]);
     }
@@ -42,7 +46,9 @@ class TeamsController extends AbstractController
             ->getRepository(Matches::class)
             ->getDrawCount($id_team);
 
-        $points = $this->calcPoints($winPoints, $loosePoints);
+        $m = new MatchesController();
+
+        $points = $m->calcPoints($winPoints, $loosePoints);
 
         array_push($resultMatches, $winPoints);
         array_push($resultMatches, $loosePoints);
