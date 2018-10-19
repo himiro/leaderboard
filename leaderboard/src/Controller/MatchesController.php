@@ -114,8 +114,8 @@ class MatchesController extends AbstractController
         $this->calcMu();
         $this->calcSigma();
 
-        $rate =
-        $rank = $this->calcSkill();
+        $rank = 0;
+        //$rank = $this->calcSkill();
 
         return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches, 'rank' => $rank]);
 

@@ -12,7 +12,9 @@
         {{ dump(matches) }}
         <h1 class="text-center uppercase">{{ teams.name }}</h1>
         <h3 class="text-center">Historique des matches</h3>
-        <h1>{{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %</h1>
+        {% if matches|length > 0 %}
+            <h1>{{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %</h1>
+        {% endif %}
         {% for match in matches %}
             <div class="team--item bg-grey-lighter flex inline-flex justify-around p-3 m-3">
                 {% if match.winner == 0 %}
