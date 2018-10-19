@@ -12,9 +12,17 @@
     <div class="teams_description flex flex-col">
         {{ dump(matches) }}
         <h1 class="text-center uppercase">{{ teams.name }}</h1>
-        <h3 class="text-center">Historique des matches</h3>
+        <h3 class="text-center">Matches history</h3>
         {% if matches|length > 0 %}
-            <h1>{{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %</h1>
+            <div class="flex inline-flex justify-around">
+                <h1><span class="text-green">{{ resultMatches[0]  }}</span> : <span class="text-red">{{ resultMatches[1] }}</span> : <span class="text-grey">{{ resultMatches[2] }}</span></h1>
+                <h1>
+                    Winrate {{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %
+                </h1>
+
+            </div>
+        {% else %}
+            <h1> This team has no match history</h1>
         {% endif %}
         {% for match in matches %}
             <div class="team--item bg-grey-lighter flex inline-flex justify-around p-3 m-3">
@@ -25,7 +33,7 @@
                 {% else %}
                     <h1 class="text-red">Loose</h1>
                 {% endif %}
-
+                <h1> VS </h1>
                 <h1> {{ name[loop.index - 1] }} </h1>
             </div>
         {% endfor %}

@@ -10,7 +10,7 @@
     </style>
     <div class="team__items__list flex flex-col">
         {% for team in teams %}
-            <div class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue hover:text-white p-3 m-3 rounded">
+            <a class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue text-blue-dark hover:text-white p-3 m-3 rounded no-underline" href="/team/{{ team.id }}">
                 <div class="team__items__list__item--left-content flex justify-center content-center w-1/6">
                     <h1 class="text-center
                     {% if loop.index == 1 %}
@@ -31,8 +31,7 @@
                         <span class="team__items__list__item__skills--item">σ: {{ team.skill_sigma }}</span>
                     </div>
                 </div>
-            </div>
-
+            </a>
         {% endfor %}
     </div>
     <ul>
