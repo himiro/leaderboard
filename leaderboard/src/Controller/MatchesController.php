@@ -14,11 +14,6 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class MatchesController extends AbstractController
 {
-
-    /**
-     * @Route("/matches", name="matches_getMatches")
-     */
-
     public function getMatches()
     {
         $match = $this->getDoctrine()
@@ -55,34 +50,8 @@ class MatchesController extends AbstractController
         return new Response('Saved new match with id ' . $match->getId());
     }
 
-    ///**
-     //* @Route("/matches/autoadd/{nb}, name="matches_addnMatch")
-     //*/
-    /*public function addnMatch($nb)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-
-
-        for ($i = 0; $i < $nb; $i++) {
-            $match = new Matches();
-            $match->setIdTeam1(rand() % 21 + 1);
-            $match->setIdTeam2(rand() % 21 + 1);
-            $start = rand(1262055681, 1262055681);
-            $date = new \DateTime($start);
-            $match->setStart($date);
-            $end = $start + (rand() % 4000);
-            $date = new \DateTime($end);
-            $match->setEnd($date);
-            $match->setWinner(rand() % 3);
-
-            $entityManager->persist($match);
-            $entityManager->flush();
-        }
-        return new Response('Saved new match with id ' . $match->getId());
-    }*/
-
     /**
-     * @Route("/matches/{id_team}", name="matches_getRanking")
+     * @Route("/team/{id_team}", name="matches_getRanking")
      */
     public function getRanking($id_team)
     {
@@ -119,6 +88,7 @@ class MatchesController extends AbstractController
          * Tau : 0.08333333333333334
          * Draw proba : 0.1
          * Epsilon : 50
+         * Taux de victoire %
          */
 
         $resultMatches = [];
@@ -132,7 +102,7 @@ class MatchesController extends AbstractController
 
         (int)$drawPoints = $this->getDoctrine()
             ->getRepository(Matches::class)
-            ->getLooseCount($id_team);
+            ->getDrawCount($id_team);
 
         $points = $this->calcPoints($winPoints, $loosePoints);
 
@@ -144,7 +114,10 @@ class MatchesController extends AbstractController
         $this->calcMu();
         $this->calcSigma();
 
-        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches]);
+        $rate =
+        $rank = $this->calcSkill();
+
+        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'name' => $name, 'resultMatches' => $resultMatches, 'rank' => $rank]);
 
     }
 
@@ -161,6 +134,11 @@ class MatchesController extends AbstractController
     public function calcSigma()
     {
         return ;
+    }
+
+    public function calcSkill($mu, $sigma)
+    {
+        return ($mu - 3 * $sigma);
     }
 
 }
