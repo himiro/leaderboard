@@ -15,9 +15,9 @@ class TeamsController extends AbstractController
 {
 
     /**
-     * @Route("/", name="teams_getTeams")
+     * @Route("/", name="teams_getTeamsInfos")
      */
-    public function getTeams()
+    public function getTeamsInfos()
     {
         $team = $this->getDoctrine()
             ->getRepository(Teams::class)

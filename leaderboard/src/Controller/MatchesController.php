@@ -55,10 +55,37 @@ class MatchesController extends AbstractController
         return new Response('Saved new match with id ' . $match->getId());
     }
 
+    ///**
+     //* @Route("/matches/autoadd/{nb} , name="matches_addnMatch")
+     //*/
+    /*public function addnMatch($nb)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+
+        for ($i = 0; $i < nb; $i++ ) {
+            $match = new Matches();
+            $match->setIdTeam1(rand() % 21 + 1);
+            $match->setIdTeam2(rand() % 21 + 1);
+            $start = rand(1262055681,1262055681);
+            $date = new \DateTime($start);
+            $match->setStart($date);
+            $end = $start + (rand() % 4000);
+            $date = new \DateTime($end);
+            $match->setEnd($date);
+            $match->setWinner(rand() % 3);
+
+            $entityManager->persist($match);
+
+            $entityManager->flush();
+        }
+        return new Response('Saved new match with id ' . $match->getId());
+    }*/
+
     /**
-     * @Route("/matches/{id_team}", name="matches_getTeamsAndMatches")
+     * @Route("/matches/{id_team}", name="matches_getRanking")
      */
-    public function getTeamsAndMatches($id_team)
+    public function getRanking($id_team)
     {
 
 
