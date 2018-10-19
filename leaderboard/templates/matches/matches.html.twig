@@ -3,10 +3,10 @@
 {% block title %}{{ teams.name }}{% endblock %}
 
 {% block body %}
-    <div class="teams_description flex flex-col justify-center">
+    <div class="teams_description flex flex-col justify-center pt-2">
         <div class="flex inline-flex item-start">
-            <a class="w-full no-underline" href="/"><h1 class="cursor-pointer h-12 w-12 uppercase border-2 border-blue text-blue hover:bg-blue hover:text-white text-center leading-tight rounded-full"> < </h1></a>
-            <h1 class="w-full uppercase">{{ teams.name }}</h1>
+            <a class="w-2/5 no-underline" href="/"><h1 class="cursor-pointer h-12 w-12 uppercase border-2 border-blue text-blue hover:bg-blue hover:text-white text-center leading-tight rounded-full"> < </h1></a>
+            <h1 class="w-3/5 uppercase">{{ teams.name }}</h1>
         </div>
         <h3 class="text-center">Matches history</h3>
         {% if matches|length > 0 %}
