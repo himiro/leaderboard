@@ -1,23 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello!{% endblock %}
-{% dump teams %}
-{% dump matches %}
-{% dump resultMatches %}
-{% dump name %}
-{% dump time %}
-
+{% block title %}{{ teams.name }}{% endblock %}
 
 {% block body %}
-    <div class="teams_description flex flex-col">
-        {{ dump(matches) }}
-        <h1 class="text-center uppercase">{{ teams.name }}</h1>
+    <div class="teams_description flex flex-col justify-center">
+        <div class="flex inline-flex item-start">
+            <a class="w-full no-underline" href="/"><h1 class="cursor-pointer h-12 w-12 uppercase border-2 border-blue text-blue hover:bg-blue hover:text-white text-center leading-tight rounded-full"> < </h1></a>
+            <h1 class="w-full uppercase">{{ teams.name }}</h1>
+        </div>
         <h3 class="text-center">Matches history</h3>
         {% if matches|length > 0 %}
             <div class="flex inline-flex justify-around">
                 <h1><span class="text-green">{{ resultMatches[0]  }}</span> : <span class="text-red">{{ resultMatches[1] }}</span> : <span class="text-grey">{{ resultMatches[2] }}</span></h1>
+                {% set winrate = ((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100  %}
                 <h1>
-                    Winrate {{((resultMatches[0] +  resultMatches[2] * 0.5) / (resultMatches[0] + resultMatches[1] + resultMatches[2]))*100 }} %
+                    <span>Winrate :</span>
+                    <span class="text-red
+                {% if winrate >  25 %}
+                text-orange-dark
+                {% if winrate >=  50 %}
+                text-yellow-dark
+                {% if winrate >=  75 %}
+               text-green-dark
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                ">{{ winrate }} %</span>
                 </h1>
 
             </div>

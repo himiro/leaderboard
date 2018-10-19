@@ -2,12 +2,7 @@
 
 {% block title %}Team ranking{% endblock %}
 
-{% dump resultMatches %}
-
 {% block body %}
-    <style>
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
     <div class="team__items__list flex flex-col">
         {% for team in teams %}
             <a class="team__items__list__item flex inline-flex bg-grey-light hover:bg-blue text-black hover:text-white p-3 m-3 rounded no-underline" href="/team/{{ team.id }}">
@@ -56,15 +51,4 @@
             </a>
         {% endfor %}
     </div>
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/TeamsController.php'|file_link(0) }}">src/Controller/TeamsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/teams/index.html.twig'|file_link(0) }}">templates/teams/index.html.twig</a></code></li>
-    </ul>
-    This friendly message is coming from:
-    <p>Voici la page equipe elle doit afficher :<br />
-        (localhost:8000/team)<br />
-        - une liste de match avec : <br />
-        - nom de l'adversaire<br />
-        - Status (victoire/défaite)<br />
-        - Durée du match</p>
 {% endblock %}
