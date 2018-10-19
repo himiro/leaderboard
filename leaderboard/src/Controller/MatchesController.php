@@ -79,26 +79,31 @@ class MatchesController extends AbstractController
          * Epsilon : 50
          */
 
-        $points = $this->calcPoints($id_team);
-        $this->calcMu();
-        $this->calcSigma();
+        $resultMatches = [];
+        (int)$winPoints = $this->getDoctrine()
+            ->getRepository(Matches::class)
+            ->getWinCount($id_team);
 
-        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'points' => $points]);
-
-    }
-
-    public function calcPoints($id_team)
-    {
-        //ratio win loose draw
-       $winPoints = $this->getDoctrine()
-        ->getRepository(Matches::class)
-        ->getWinCount($id_team);
-
-        $loosePoints = $this->getDoctrine()
+        (int)$loosePoints = $this->getDoctrine()
             ->getRepository(Matches::class)
             ->getLooseCount($id_team);
 
-    return ((int)$winPoints - (int)$loosePoints);
+        $points = $this->calcPoints($winPoints, $loosePoints);
+
+        array_push($resultMatches, $winPoints);
+        array_push($resultMatches, $loosePoints);
+        array_push($resultMatches, $points);
+
+        $this->calcMu();
+        $this->calcSigma();
+
+        return $this->render('matches/matches.html.twig', ['matches' => $match, 'teams' => $team, 'resultMatches' => $resultMatches]);
+
+    }
+
+    public function calcPoints($winPoints, $loosePoints)
+    {
+        return ($winPoints - $loosePoints);
     }
 
     public function calcMu()
